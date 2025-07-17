@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Registrations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="registration.xsd">
+  <User>
+    <name>Jane Doe</name>
+    <email>jane@gmail.com</email>
+    <phone>01160720295</phone>
+    <subject>Inquiry about new arrivals</subject>
+    <InquiryType>Sales</InquiryType>
+    <company>jane.co</company>
+    <bestTime>Weekdays, 10am–4pm</bestTime>
+    <urgency>Medium</urgency>
+    <attachment>none</attachment>
+    <message>Saya suka barang-barang Kyrex</message>
+  </User>
+</Registrations>

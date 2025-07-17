@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="fashion1.xsl"?>
+<fashion>
+	<category type="women">
+	<item>
+		<name>T-shirt</name>
+		<price>50</price>
+		<brand>Brand A</brand>
+		<size>S</size>
+		<sale>On Sale</sale>
+		<color>Red</color>
+		</item>
+	<item>
+		<name>Dress</name>
+		<price>100</price>
+		<brand>Brand B</brand>
+		<size>M</size>
+		<sale>Not on Sale</sale>
+		<color>Blue</color>
+	</item>
+	<item>
+		<name>Jeans</name>
+		<price>50</price>
+		<brand>Brand A</brand>
+		<size>L</size>
+		<sale>On Sale</sale>
+		<color>Green</color>
+	</item>
+	<item>
+		<name>Blouse</name>
+		<price>80</price>
+		<brand>Brand B</brand>
+		<size>XS</size>
+		<sale>Not on Sale</sale>
+		<color>Red</color>
+	</item>
+	
+	</category>
+	</fashion>	

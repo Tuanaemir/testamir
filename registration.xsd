@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Registrations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="User">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string"/>
+              <xs:element name="email" type="xs:string"/>
+              <xs:element name="phone" type="xs:string"/>
+              <xs:element name="subject" type="xs:string"/>
+
+              <xs:element name="InquiryType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Support"/>
+                    <xs:enumeration value="Sales"/>
+                    <xs:enumeration value="Feedback"/>
+                    <xs:enumeration value="Other"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="company" type="xs:string" minOccurs="0"/>
+              <xs:element name="bestTime" type="xs:string" minOccurs="0"/>
+
+              <xs:element name="urgency">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Low"/>
+                    <xs:enumeration value="Medium"/>
+                    <xs:enumeration value="High"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+
+              <xs:element name="attachment" type="xs:string" minOccurs="0"/>
+              <xs:element name="message" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

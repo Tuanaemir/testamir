@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kyrex | Checkout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/kyrexicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <style>
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #ced4da;
+        }
+        .checkout-header {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .order-summary {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: .3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start Checkout Header -->
+    <div class="checkout-header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <a href="cart.html" class="text-dark text-decoration-none"><i class="fas fa-chevron-left"></i> Back</a>
+                </div>
+                 <a class="navbar-brand" href="index.html">
+                    <img src="images/KYREX LOGO.png" width="125px" alt="Kyrex Logo">
+                </a>
+                <ul class="nav">
+                    <li class="nav-item"><a href="catalog.html?category=women" class="nav-link text-dark">Women</a></li>
+                    <li class="nav-item"><a href="catalog.html?category=men" class="nav-link text-dark">Men</a></li>
+                    <li class="nav-item"><a href="catalog.html?category=new" class="nav-link text-dark">New Arrivals</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Checkout Header -->
+
+    <!-- Start Content -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Left Side: Forms -->
+            <div class="col-lg-7">
+                <!-- Contact Details -->
+                <h4>Contact Details</h4>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Email address">
+                </div>
+                <hr>
+
+                <!-- Delivery Options -->
+                <h4>Delivery</h4>
+                <div class="d-flex border rounded mb-3">
+                    <button id="delivery-home-btn" class="btn btn-light flex-fill text-center p-3 border-end" style="border-radius: 0;">Home Delivery</button>
+                    <button id="delivery-store-btn" class="btn btn-light flex-fill text-center p-3" style="border-radius: 0;">Store Pickup</button>
+                </div>
+                
+                <!-- Home Delivery Form -->
+                <div id="home-delivery-form">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="First name*">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Last name*">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Address*">
+                    </div>
+                     <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Phone Number*">
+                    </div>
+                </div>
+
+                <!-- Store Delivery Form (Initially hidden) -->
+                <div id="store-delivery-form" style="display: none;">
+                    <p>Select a store for pickup:</p>
+                    <select class="form-select">
+                        <option selected>Choose a store...</option>
+                        <option value="1">Kyrex Store - Downtown</option>
+                        <option value="2">Kyrex Store - Uptown</option>
+                        <option value="3">Kyrex Store - Suburb</option>
+                    </select>
+                </div>
+                <hr>
+                
+                <!-- Payment -->
+                <h4>Payment</h4>
+                <p>All transactions are secure and encrypted.</p>
+                <div class="border p-3 rounded">
+                    <h6><i class="fab fa-cc-visa"></i> Credit Card</h6>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Card Number">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="Expiry Date (MM/YY)">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" placeholder="CVC / CVV">
+                        </div>
+                    </div>
+                </div>
+                 <div class="d-grid mt-4">
+                    <button class="btn btn-dark btn-lg">Place your order</button>
+                </div>
+
+            </div>
+
+            <!-- Right Side: Order Summary -->
+            <div class="col-lg-5">
+                <div class="order-summary">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="mb-0">Order Summary</h4>
+                        <a href="cart.html" class="text-dark">Edit</a>
+                    </div>
+                    <div id="summary-items-container">
+                        <!-- Summary items will be injected here -->
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">$0.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between mt-2">
+                        <span>Delivery</span>
+                        <span id="summary-delivery">$5.00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between h5">
+                        <span>Total</span>
+                        <strong id="summary-total">$0.00</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Content -->
+    
+    <!-- ... footer ... -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Delivery option toggle
+            const homeBtn = document.getElementById('delivery-home-btn');
+            const storeBtn = document.getElementById('delivery-store-btn');
+            const homeForm = document.getElementById('home-delivery-form');
+            const storeForm = document.getElementById('store-delivery-form');
+
+            homeBtn.addEventListener('click', () => {
+                homeForm.style.display = 'block';
+                storeForm.style.display = 'none';
+                homeBtn.classList.add('active');
+                storeBtn.classList.remove('active');
+            });
+
+            storeBtn.addEventListener('click', () => {
+                homeForm.style.display = 'none';
+                storeForm.style.display = 'block';
+                homeBtn.classList.remove('active');
+                storeBtn.classList.add('active');
+            });
+            homeBtn.click(); // Set home delivery as default
+
+            // Order summary logic
+            const summaryContainer = document.getElementById('summary-items-container');
+            const subtotalEl = document.getElementById('summary-subtotal');
+            const deliveryEl = document.getElementById('summary-delivery');
+            const totalEl = document.getElementById('summary-total');
+            
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let subtotal = 0;
+            const deliveryCost = 5.00; // Example delivery cost
+
+            if (cart.length === 0) {
+                summaryContainer.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                cart.forEach(item => {
+                    const itemPrice = parseFloat(String(item.price).replace('$', ''));
+                    subtotal += itemPrice * item.quantity;
+                    const itemHTML = `
+                        <div class="d-flex justify-content-between mb-3">
+                            <div class="d-flex">
+                                <img src="${item.image}" width="60" class="me-3 rounded">
+                                <div>
+                                    <h6 class="mb-0">${item.name}</h6>
+                                    <small class="text-muted d-block">Qty: ${item.quantity}</small>
+                                    <small class="text-muted d-block">Color: ${item.color || 'N/A'}</small>
+                                    <small class="text-muted d-block">Size: ${item.size || 'N/A'}</small>
+                                </div>
+                            </div>
+                            <span>$${(itemPrice * item.quantity).toFixed(2)}</span>
+                        </div>
+                    `;
+                    summaryContainer.insertAdjacentHTML('beforeend', itemHTML);
+                });
+            }
+
+            subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+            deliveryEl.textContent = `$${deliveryCost.toFixed(2)}`;
+            totalEl.textContent = `$${(subtotal + deliveryCost).toFixed(2)}`;
+        });
+    </script>
+</body>
+</html> 

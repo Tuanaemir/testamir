@@ -1,0 +1,209 @@
+/*
+Custom Css
+*/
+.search-bar .input-group {
+    border: 1px solid #ced4da;
+    border-radius: 50px;
+    padding: 0.25rem 0.5rem;
+}
+
+.search-bar .form-control {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.search-bar .input-group-text {
+    border: none;
+    background: transparent;
+}
+
+.search-bar .form-control:focus,
+.search-bar .input-group-text:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* Mega Menu Styles */
+.mega-menu-container {
+    position: relative;
+}
+
+.mega-menu-container .nav-item.dropdown {
+    position: static;
+}
+
+.nav-item.dropdown:hover .mega-menu {
+    display: block;
+}
+
+.dropdown-menu.mega-menu {
+    display: none;
+    position: absolute;
+    width: 850px;
+    left: 0;
+    top: 100%;
+    padding: 20px;
+    border-radius: 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.mega-menu .dropdown-header {
+    font-size: 1rem;
+    padding-left: 0.75rem;
+    margin-bottom: 0.5rem;
+    color: #212529;
+}
+
+.mega-menu .dropdown-item {
+    padding: 0.25rem 0.75rem;
+}
+
+.mega-menu .border-start {
+    border-left: 1px solid #e9ecef !important;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.mega-menu .dropdown-item:focus,
+.mega-menu .dropdown-item:active {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* Login Page Styles */
+.login-page-container {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-container {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    border: 1px solid #dee2e6;
+    width: 100%;
+    max-width: 450px;
+}
+
+.login-form-container .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: #333;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.login-form-container .h2 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.login-form-container p {
+    margin-bottom: 2rem;
+    color: #6c757d;
+}
+
+.login-form-container .form-control,
+.login-form-container .btn {
+    border-radius: 50px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+/* Store Finder Page */
+.store-finder-container h1 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.store-finder-container .form-control, 
+.store-finder-container .input-group-text,
+.store-finder-container .btn {
+    border-radius: 0;
+}
+
+/* Catalog Page */
+.filter-bar .btn {
+    border-radius: 50px;
+}
+
+.filter-bar .btn.dropdown-toggle[aria-expanded="true"],
+.filter-bar .btn.dropdown-toggle:active {
+    background-color: #212529;
+    color: #fff;
+}
+
+/* Product Detail Page */
+.product-thumbnail-gallery img {
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 2px;
+}
+
+.product-thumbnail-gallery img:hover,
+.product-thumbnail-gallery img.active {
+    border-color: #000;
+}
+
+.size-chart th,
+.size-chart td {
+    text-align: center;
+}
+
+.btn-outline-secondary.active {
+    background-color: #212529;
+    color: #fff;
+}
+
+/* Cart Notification */
+.cart-notification {
+    display: none; /* Hidden by default */
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1050;
+    width: 200px;
+}
+
+.cart-notification.show {
+    display: block; /* Show the notification */
+}
+
+.cart-notification-content p {
+    margin-bottom: 10px;
+}
+
+.cart-notification-content .btn {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.cart-notification-content .btn:last-child {
+    margin-bottom: 0;
+}
+
+#wishlist-cart-notification {
+    position: fixed;
+}
+
+/* Page-level Notification */
+.page-notification {
+    display: none;
+}
